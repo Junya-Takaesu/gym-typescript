@@ -12,19 +12,19 @@ import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 
 const benefits: BenefitType[] = [
   {
-    icon: <HomeModernIcon className="h-6 w-6" />,
+    icon: <HomeModernIcon className="w-6 h-6" />,
     title: "State of the Art Facilities",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur illo quas aspernatur perspiciatis voluptas autem distinctio, commodi ipsa veritatis inventore atque sunt tempora dolore soluta eligendi impedit dolores, eaque possimus!",
   },
   {
-    icon: <UserGroupIcon className="h-6 w-6" />,
+    icon: <UserGroupIcon className="w-6 h-6" />,
     title: "100's of Diverse Classes",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur illo quas aspernatur perspiciatis voluptas autem distinctio, commodi ipsa veritatis inventore atque sunt tempora dolore soluta eligendi impedit dolores, eaque possimus!",
   },
   {
-    icon: <AcademicCapIcon className="h-6 w-6" />,
+    icon: <AcademicCapIcon className="w-6 h-6" />,
     title: "Expert and Pro Trainers",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur illo quas aspernatur perspiciatis voluptas autem distinctio, commodi ipsa veritatis inventore atque sunt tempora dolore soluta eligendi impedit dolores, eaque possimus!",
@@ -42,7 +42,7 @@ type BenefitsIndexProps = baseProps;
 
 const Benefits = ({ setSelectedPage }: BenefitsIndexProps) => {
   return (
-    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
+    <section id="benefits" className="w-5/6 min-h-full py-20 mx-auto">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
@@ -72,7 +72,7 @@ const Benefits = ({ setSelectedPage }: BenefitsIndexProps) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={container}
-          className="mt-5 items-center justify-between gap-8 md:flex"
+          className="items-center justify-between gap-8 mt-5 md:flex"
         >
           {benefits.map((benefit: BenefitType) => (
             <Benefit
@@ -86,7 +86,7 @@ const Benefits = ({ setSelectedPage }: BenefitsIndexProps) => {
         </motion.div>
 
         {/* GRAPHICS AND DESCRIPTION */}
-        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
+        <div className="items-center justify-between gap-20 mt-16 md:mt-28 md:flex">
           {/* GRAPHIC */}
           <img
             className="mx-auto"
